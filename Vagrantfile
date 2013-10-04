@@ -10,7 +10,7 @@ Vagrant::Config.run do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ['cookbooks']
-    chef.json.merge! :tz => 'America/Chicago'
+    chef.json.merge! :tz => 'America/Los_Angeles'
 
     chef.add_recipe 'apt'
     chef.add_recipe 'timezone'
